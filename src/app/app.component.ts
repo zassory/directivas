@@ -10,5 +10,11 @@ export class AppComponent {
     {nombre: 'Nicolás Cáceres Latorre', estado: 'Titulado'},
     {nombre: 'Alonzo Quiroz' , estado: 'Egresado'},
     {nombre: 'Diego Mandril' , estado: 'Titulado'},
+    {nombre: 'Natalia Ojeda' , estado: 'Abandono'},
   ];
+  mostrar = true;
+
+  toogle():void{
+    this.mostrar = !this.mostrar;
+  }
 }

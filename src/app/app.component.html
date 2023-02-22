@@ -1,9 +1,13 @@
 <div class="container mt-4">
   <div class="row">
     <h3>Listado de estudiantes</h3>
+    <button class="btn btn-primary ml-auto" (click)="toogle()">
+      Toggle
+    </button>
   </div>
   <br>
-  <table class="table">
+  <!--<table class="table" *ngIf="listEstudiantes.length > 0">-->
+  <table class="table" *ngIf="mostrar">
     <thead>
       <th>Nro</th>
       <th>Nombre</th>
@@ -13,8 +17,9 @@
       <tr *ngFor="let estudiante of listEstudiantes; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{estudiante.nombre}}</td>
-        <td>{{estudiante.estado}}</td>
+        <td [ngStyle]="{'font-style': estudiante.estado === 'Titulado' ? 'italic' : 'normal'}">{{estudiante.estado}}</td>
       </tr>
     </tbody>
   </table>
+  <h3 *ngIf="!mostrar">No hay registros para mostrar</h3>
 </div>
