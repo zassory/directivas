@@ -11,6 +11,7 @@ export class AppComponent {
     {nombre: 'Alonzo Quiroz' , estado: 'Egresado'},
     {nombre: 'Diego Mandril' , estado: 'Titulado'},
     {nombre: 'Natalia Ojeda' , estado: 'Abandono'},
+    {nombre: 'Nicolas Gomez' , estado: 'Libre'},
   ];
   mostrar = true;
 
